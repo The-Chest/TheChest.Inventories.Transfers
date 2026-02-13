@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup Label="Information">
+		<Title>The Chest Inventories - Transfers</Title>
+		<Description></Description>
+		<Authors>The Chest</Authors>
+	</PropertyGroup>
+	
+	<PropertyGroup Label="Package">
+		<IsPackable>true</IsPackable>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageTags></PackageTags>
+		<PackageProjectUrl>/</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>See CHANGELOG.md for details.</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Repository">
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RepositoryUrl>https://github.com/The-Chest/TheChest.Inventories.Transfers</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryBranch>main</RepositoryBranch>
+		<RepositoryCommit>$(SourceRevisionId)</RepositoryCommit>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Compiler">
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DebugType>portable</DebugType>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+	
+	<PropertyGroup Label="Symbols">
+		<IncludeSymbols>true</IncludeSymbols>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+
+	<PropertyGroup Label="CI">
+		<Deterministic>true</Deterministic>
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Assembly">
+		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+		<SignAssembly>False</SignAssembly>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Analysis">
+		<EnableNETAnalyzers>False</EnableNETAnalyzers>
+		<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+		<AnalysisLevel>none</AnalysisLevel>
+	</PropertyGroup>
+
+	<ItemGroup Label="Package">
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Label="Docs">
+		<None Include="..\..\README.md">
+			<Pack>False</Pack>
+		</None>
+		<None Include="..\..\CHANGELOG.md">
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
+</Project>
